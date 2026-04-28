@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "eslint": "npx eslint .",
-    "stylelint": "npx stylelint '**/*.css' --fix",
+    "stylelint": "npx stylelint '**/*.css'",
+    "stylelint:fix": "npx stylelint '**/*.css' --fix",
     "test": "vitest --run",
     "preview": "vite preview"
   },
