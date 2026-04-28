@@ -9,13 +9,47 @@
   </head>
   <body>
     <main>
-      <h1>Heading</h1>
+      <h1 class="sr-only">Splitter</h1>
+      <img src="./src/assets/logo.svg" alt="Splitter Logo" srcset="" />
+
+      <form action="" class="splitForm">
+        <div class="user-inputs">
+          <label for="tip-price">Bill:</label>
+          <input
+            type="number"
+            id="tip-price"
+            placeholder="price"
+            step=".01"
+            value="0"
+            min="0"
+          />
+
+          <p>Select Tip %</p>
+          <button type="button" aria-label="5%">5%</button>
+          <button type="button" aria-label="10%">10%</button>
+          <button type="button" aria-label="15%">15%</button>
+          <button type="button" aria-label="25%">25%</button>
+          <button type="button" aria-label="50%">50%</button>
+          <button type="button" aria-label="Custom tip amount">Custom</button>
+
+          <label for="numberOfPeopleInput">Number of People:</label>
+          <input
+            type="number"
+            name="numberOfPeopleInput"
+            id="numberOfPeopleInput"
+          />
+        </div>
+
+        <div class="calulated-totals">
+          <p>Tip Amount / person</p>
+
+          <p>Total / person</p>
+
+          <button type="button" aria-label="Reset">Reset</button>
+        </div>
+      </form>
       <button id="counter" type="button"></button>
     </main>
-    <div id="app" role="banner">
-      jj
-      <section id="center"></section>
-    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
