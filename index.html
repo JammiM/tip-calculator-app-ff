@@ -12,7 +12,7 @@
       <h1 class="sr-only">Splitter</h1>
       <img src="./src/assets/logo.svg" alt="Splitter Logo" srcset="" />
 
-      <form action="" class="splitForm">
+      <form action="" class="splitForm" id="splitForm">
         <div class="user-inputs">
           <label for="tip-price">Bill:</label>
           <input
@@ -22,22 +22,29 @@
             step=".01"
             value="0"
             min="0"
+            max="9999999"
           />
 
           <p>Select Tip %</p>
-          <button type="button" aria-label="5%">5%</button>
-          <button type="button" aria-label="10%">10%</button>
-          <button type="button" aria-label="15%">15%</button>
-          <button type="button" aria-label="25%">25%</button>
-          <button type="button" aria-label="50%">50%</button>
-          <button type="button" aria-label="Custom tip amount">Custom</button>
+          <div id="single-tip-amount">
+            <button type="button" aria-label="5%">5%</button>
+            <button type="button" aria-label="10%">10%</button>
+            <button type="button" aria-label="15%">15%</button>
+            <button type="button" aria-label="25%">25%</button>
+            <button type="button" aria-label="50%">50%</button>
+            <input
+              type="number"
+              aria-label="Custom tip amount"
+              name=""
+              id=""
+              min="0"
+              max="100"
+              placeholder="Custom"
+            />
+          </div>
 
-          <label for="numberOfPeopleInput">Number of People:</label>
-          <input
-            type="number"
-            name="numberOfPeopleInput"
-            id="numberOfPeopleInput"
-          />
+          <label for="number-of-people">Number of People:</label>
+          <input type="number" name="number-of-people" id="number-of-people" />
         </div>
 
         <div class="calulated-totals">
@@ -45,7 +52,9 @@
 
           <p>Total / person</p>
 
-          <button type="button" aria-label="Reset">Reset</button>
+          <button type="button" id="reset-button" aria-label="Reset">
+            Reset
+          </button>
         </div>
       </form>
       <button id="counter" type="button"></button>

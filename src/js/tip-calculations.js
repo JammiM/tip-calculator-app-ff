@@ -43,3 +43,15 @@ export function tipAmountPerPerson(grandTotal, numberOfPeople) {
   const amountPerPerson = grandTotal / numberOfPeople;
   return amountPerPerson;
 }
+
+const resetButton = document.getElementById("reset-button");
+
+const splitForm = document.getElementById("splitForm");
+
+resetButton.addEventListener("click", () => {
+  Array.from(splitForm.elements).map((item) => {
+    if (item.type == "number") {
+      item.value = 0;
+    }
+  });
+});
