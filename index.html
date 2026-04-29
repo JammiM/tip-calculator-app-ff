@@ -27,24 +27,67 @@
 
           <p>Select Tip %</p>
           <div id="single-tip-amount">
-            <button type="button" aria-label="5%">5%</button>
-            <button type="button" aria-label="10%">10%</button>
-            <button type="button" aria-label="15%">15%</button>
-            <button type="button" aria-label="25%">25%</button>
-            <button type="button" aria-label="50%">50%</button>
+            <button
+              type="button"
+              data-tip="5"
+              class="tip-option"
+              aria-label="5%"
+            >
+              5%
+            </button>
+            <button
+              type="button"
+              data-tip="10"
+              class="tip-option"
+              aria-label="10%"
+            >
+              10%
+            </button>
+            <button
+              type="button"
+              data-tip="15"
+              class="tip-option"
+              aria-label="15%"
+            >
+              15%
+            </button>
+            <button
+              type="button"
+              data-tip="25"
+              class="tip-option"
+              aria-label="25%"
+            >
+              25%
+            </button>
+            <button
+              type="button"
+              data-tip="50"
+              class="tip-option"
+              aria-label="50%"
+            >
+              50%
+            </button>
+            <label for="custom-tip-price">Custom TipBill:</label>
             <input
               type="number"
               aria-label="Custom tip amount"
               name=""
-              id=""
+              id="custom-tip-price"
               min="0"
+              value="0"
+              class="tip-option"
               max="100"
               placeholder="Custom"
             />
           </div>
 
           <label for="number-of-people">Number of People:</label>
-          <input type="number" name="number-of-people" id="number-of-people" />
+          <input
+            type="number"
+            name="number-of-people"
+            value="0"
+            id="number-of-people"
+          />
         </div>
 
         <div class="calulated-totals">

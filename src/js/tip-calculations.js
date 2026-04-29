@@ -44,8 +44,10 @@ export function tipAmountPerPerson(grandTotal, numberOfPeople) {
   return amountPerPerson;
 }
 
-const resetButton = document.getElementById("reset-button");
+let tipAmount = 0;
 
+const resetButton = document.getElementById("reset-button");
+const tipOptions = document.querySelectorAll(".tip-option");
 const splitForm = document.getElementById("splitForm");
 
 resetButton.addEventListener("click", () => {
@@ -53,5 +55,47 @@ resetButton.addEventListener("click", () => {
     if (item.type == "number") {
       item.value = 0;
     }
+
+    item.classList.remove("selected-tip");
   });
 });
+
+tipOptions.forEach((inputItem) => {
+  inputItem.addEventListener("click", (ev) => {
+    if (ev.target.tagName == "BUTTON") {
+      splitForm.elements.namedItem("custom-tip-price").value = 0;
+
+      tipAmount = ev.target.getAttribute("data-tip");
+
+      handleTipStyling(tipOptions, ev.target);
+    }
+  });
+});
+
+const customTip = splitForm.elements.namedItem("custom-tip-price");
+
+customTip.addEventListener("change", (ev) => {
+  tipAmount = ev.target.value;
+});
+
+customTip.addEventListener("click", (ev) => {
+  handleTipStyling(tipOptions, ev.target);
+});
+
+function deselectTipOption(inputElement) {
+  inputElement.classList.remove("selected-tip");
+}
+
+function selectTipOption(inputElement) {
+  inputElement.classList.add("selected-tip");
+}
+
+function handleTipStyling(_tipOptions, _targetElement) {
+  _tipOptions.forEach((currentElement) => {
+    if (_targetElement == currentElement) {
+      selectTipOption(_targetElement);
+    } else {
+      deselectTipOption(currentElement);
+    }
+  });
+}
