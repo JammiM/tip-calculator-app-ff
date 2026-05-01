@@ -20,6 +20,7 @@ main {
 }
 
 .sr-only {
+  $b: #{&};
   position: absolute;
   width: 1px;
   height: 1px;

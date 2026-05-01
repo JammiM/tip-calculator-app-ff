@@ -13,10 +13,7 @@
       <img src="./src/assets/logo.svg" alt="Splitter Logo" srcset="" />
 
       <form action="" class="split-form" id="splitForm">
-        <div class="split-form__element">sdddd</div>
-        <div class="__element">sdddd</div>
-
-        <div class="user-inputs">
+        <div class="user-inputs split-form__subgrid-item">
           <label for="tip-price">Bill:</label>
           <input
             type="number"
@@ -96,12 +93,12 @@
           />
         </div>
 
-        <div class="calulated-totals">
+        <div class="calulated-totals split-form__subgrid-item">
           <p class="tip-amount">
             Tip Amount<span class="per-person">/ person</span>
           </p>
 
-          <!-- <p>Total<span>/ person</span></p> -->
+          <p>Total<span class="per-person">/ person</span></p>
 
           <button type="button" id="reset-button" aria-label="Reset">
             Reset
