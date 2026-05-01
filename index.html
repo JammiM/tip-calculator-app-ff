@@ -87,9 +87,12 @@
           <input
             type="number"
             name="number-of-people"
-            value="0"
             id="number-of-people"
+            placeholder="0"
             class="split-form__number-input-field"
+            required
+            oninvalid="this.setCustomValidity(`Can't be zero`)"
+            oninput="this.setCustomValidity(``)"
           />
         </div>
 
@@ -100,9 +103,7 @@
 
           <p>Total<span class="per-person">/ person</span></p>
 
-          <button type="button" id="reset-button" aria-label="Reset">
-            Reset
-          </button>
+          <input type="submit" value="Reset" id="reset-button" />
         </div>
       </form>
       <button id="counter" type="button"></button>

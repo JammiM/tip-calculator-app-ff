@@ -47,5 +47,9 @@
       outline: none;
       border: 2px solid var(--green-900);
     }
+
+    &:user-invalid {
+      border: 2px solid red;
+    }
   }
 }
