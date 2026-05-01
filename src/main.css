@@ -1,3 +1,18 @@
+:root {
+  --green-900: hsl(183deg 100% 15%);
+  --light-green: hsl(187deg 43% 84%);
+  --grey-500: hsl(186deg 14% 43%);
+  --grey-400: hsl(184deg 14% 56%);
+  --grey-200: hsl(185deg 41% 84%);
+  --grey-50: hsl(189deg 47% 97%);
+  --white: hsl(0deg 100% 100%);
+  --default-padding: 1.25em;
+}
+
+body {
+  background-color: var(--light-green);
+}
+
 main {
   height: 100dvh;
   place-items: center;

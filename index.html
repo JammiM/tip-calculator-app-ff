@@ -12,7 +12,10 @@
       <h1 class="sr-only">Splitter</h1>
       <img src="./src/assets/logo.svg" alt="Splitter Logo" srcset="" />
 
-      <form action="" class="splitForm" id="splitForm">
+      <form action="" class="split-form" id="splitForm">
+        <div class="split-form__element">sdddd</div>
+        <div class="__element">sdddd</div>
+
         <div class="user-inputs">
           <label for="tip-price">Bill:</label>
           <input
@@ -23,6 +26,7 @@
             value="0"
             min="0"
             max="9999999"
+            class="split-form__number-input-field"
           />
 
           <p>Select Tip %</p>
@@ -30,7 +34,7 @@
             <button
               type="button"
               data-tip="5"
-              class="tip-option"
+              class="tip-option split-form__tip-button"
               aria-label="5%"
             >
               5%
@@ -38,7 +42,7 @@
             <button
               type="button"
               data-tip="10"
-              class="tip-option"
+              class="tip-option split-form__tip-button"
               aria-label="10%"
             >
               10%
@@ -46,7 +50,7 @@
             <button
               type="button"
               data-tip="15"
-              class="tip-option"
+              class="tip-option split-form__tip-button"
               aria-label="15%"
             >
               15%
@@ -54,7 +58,7 @@
             <button
               type="button"
               data-tip="25"
-              class="tip-option"
+              class="tip-option split-form__tip-button"
               aria-label="25%"
             >
               25%
@@ -62,23 +66,24 @@
             <button
               type="button"
               data-tip="50"
-              class="tip-option"
+              class="tip-option split-form__tip-button"
               aria-label="50%"
             >
               50%
             </button>
-            <label for="custom-tip-price">Custom TipBill:</label>
+            <label for="custom-tip-price" class="sr-only">Custom Tip:</label>
             <input
               type="number"
               aria-label="Custom tip amount"
-              name=""
+              name="custom-tip-price"
               id="custom-tip-price"
               min="0"
-              value="0"
-              class="tip-option"
+              class="tip-option split-form__number-input-field"
               max="100"
               placeholder="Custom"
             />
+
+            <!-- class="tip-option split-form-custom-tip-button" -->
           </div>
 
           <label for="number-of-people">Number of People:</label>
@@ -87,13 +92,16 @@
             name="number-of-people"
             value="0"
             id="number-of-people"
+            class="split-form__number-input-field"
           />
         </div>
 
         <div class="calulated-totals">
-          <p>Tip Amount / person</p>
+          <p class="tip-amount">
+            Tip Amount<span class="per-person">/ person</span>
+          </p>
 
-          <p>Total / person</p>
+          <!-- <p>Total<span>/ person</span></p> -->
 
           <button type="button" id="reset-button" aria-label="Reset">
             Reset
