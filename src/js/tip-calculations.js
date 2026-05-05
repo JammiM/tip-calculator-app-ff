@@ -49,8 +49,12 @@ let tipAmount = 0;
 const resetButton = document.getElementById("reset-button");
 const tipOptions = document.querySelectorAll(".tip-option");
 const splitForm = document.getElementById("splitForm");
+const numberOfPeople = document.getElementById("number-of-people");
 
-resetButton.addEventListener("click", () => {
+resetButton.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  numberOfPeople.reportValidity();
+
   Array.from(splitForm.elements).map((item) => {
     if (item.type == "number") {
       item.value = 0;
@@ -58,6 +62,8 @@ resetButton.addEventListener("click", () => {
 
     item.classList.remove("selected-tip");
   });
+
+  splitForm.reset();
 });
 
 tipOptions.forEach((inputItem) => {
