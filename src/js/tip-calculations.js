@@ -49,7 +49,13 @@ let tipAmount = 0;
 const resetButton = document.getElementById("reset-button");
 const tipOptions = document.querySelectorAll(".tip-option");
 const splitForm = document.getElementById("splitForm");
-const numberOfPeople = document.getElementById("number-of-people");
+const numberOfPeople = splitForm.elements.namedItem("number-of-people");
+const billcost = splitForm.elements.namedItem("bill");
+
+const customTip = splitForm.elements.namedItem("custom-tip-price");
+
+const tipPerPerson = document.getElementById("tip-per-person");
+const totalPerPerson = document.getElementById("total-per-person");
 
 resetButton.addEventListener("click", (ev) => {
   ev.preventDefault();
@@ -74,18 +80,15 @@ tipOptions.forEach((inputItem) => {
       tipAmount = ev.target.getAttribute("data-tip");
 
       handleTipStyling(tipOptions, ev.target);
+      calculateTotals();
     }
   });
 });
 
-const customTip = splitForm.elements.namedItem("custom-tip-price");
-
-customTip.addEventListener("change", (ev) => {
+customTip.addEventListener("input", (ev) => {
   tipAmount = ev.target.value;
-});
 
-customTip.addEventListener("click", (ev) => {
-  handleTipStyling(tipOptions, ev.target);
+  calculateTotals();
 });
 
 function deselectTipOption(inputElement) {
@@ -104,4 +107,32 @@ function handleTipStyling(_tipOptions, _targetElement) {
       deselectTipOption(currentElement);
     }
   });
+}
+
+billcost.addEventListener("change", calculateTotals);
+
+numberOfPeople.addEventListener("input", (ev) => {
+  calculateTotals();
+});
+
+function calculateTotals() {
+  if ((tipAmount > 0) & (numberOfPeople.value > 0) & (billcost.value > 0)) {
+    tipPerPerson.innerText = `${formatCurrency(
+      numberOfPeople.value + billcost.value + tipAmount
+    )}`;
+
+    totalPerPerson.innerText = `${formatCurrency(
+      numberOfPeople.value + billcost.value + tipAmount
+    )}`;
+  }
+}
+
+function formatCurrency(initialNumber) {
+  const nf = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 2,
+  });
+
+  return nf.format(initialNumber);
 }

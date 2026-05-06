@@ -18,6 +18,7 @@
           <input
             type="number"
             id="tip-price"
+            name="bill"
             placeholder="price"
             step=".01"
             value="0"
@@ -79,8 +80,6 @@
               max="100"
               placeholder="Custom"
             />
-
-            <!-- class="tip-option split-form-custom-tip-button" -->
           </div>
 
           <label for="number-of-people">Number of People:</label>
@@ -100,8 +99,10 @@
           <p class="tip-amount">
             Tip Amount<span class="per-person">/ person</span>
           </p>
+          <p id="tip-per-person">$0.00</p>
 
           <p>Total<span class="per-person">/ person</span></p>
+          <p id="total-per-person">$0.00</p>
 
           <input type="submit" value="Reset" id="reset-button" />
         </div>
