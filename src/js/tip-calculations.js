@@ -132,8 +132,14 @@ export function generateForm() {
   container.innerHTML = `
   <main>
     <h1 class="sr-only">Splitter</h1>
-      <img src="/tip-calculator-app-ff/src/assets/logo.svg" alt="Splitter Logo" srcset=""/>
-      <form action="" class="split-form" id="splitForm">
+
+    <picture>
+      <img src=${
+        new URL("/logo.svg", import.meta.url).href
+      } alt="Splitter Logo" />
+    </picture>
+    
+    <form action="" class="split-form" id="splitForm">
         <div class="user-inputs split-form__subgrid-item">
           <label for="tip-price">Bill:</label>
           <input
