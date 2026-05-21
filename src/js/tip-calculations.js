@@ -275,8 +275,4 @@ customTip.addEventListener("input", (ev) => {
 
 billcost.addEventListener("change", calculateTotals);
 
-// numberOfPeople.addEventListener("input", (ev) => {
-//   calculateTotals();
-// });
-
 numberOfPeople.addEventListener("input", calculateTotals);
