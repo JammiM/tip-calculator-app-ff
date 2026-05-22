@@ -73,4 +73,30 @@
       color: var(--green-900);
     }
   }
+
+  &__calulated-totals {
+    // border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__calulated-text {
+    // border: 1px solid blue;
+    display: grid;
+  }
+
+  &__total-text {
+    color: var(--white);
+  }
+  &__total-text--muted {
+    color: var(--grey-400);
+  }
+
+  &__final-cost {
+    justify-self: end;
+    align-content: center;
+
+    color: var(--light-lime);
+    font-size: 1.75rem;
+  }
 }
