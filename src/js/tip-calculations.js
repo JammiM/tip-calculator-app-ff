@@ -231,7 +231,7 @@ export function generateForm() {
           <p>Total<span class="per-person">/ person</span></p>
           <p id="total--bill-per-person">$0.00</p>
 
-          <input type="submit" value="Reset" id="reset-button" />
+          <input type="submit" value="RESET" id="reset-button" class="split-form__reset-button" />
         </div>
       </form>
 </main>`;

@@ -56,4 +56,21 @@
       border: 2px solid yellow;
     }
   }
+
+  &__reset-button {
+    cursor: pointer;
+    background-color: var(--light-lime);
+    color: var(--green-900);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 100%;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--light-green);
+      color: var(--green-900);
+    }
+  }
 }
