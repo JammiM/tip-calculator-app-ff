@@ -111,4 +111,27 @@
     color: var(--light-lime);
     font-size: var(--fs-large);
   }
+
+  &__prefixed-input-field {
+    display: flex;
+
+    align-items: center;
+    border: 0.125rem solid transparent;
+    background-color: var(--grey-50);
+    border-radius: 0.5rem;
+    padding: 5px;
+
+    input {
+      border: none;
+      outline: none;
+      width: 100%;
+      text-align: end;
+      background-color: transparent;
+      color: var(--green-900);
+    }
+
+    &:focus-within {
+      border-color: var(--green-900);
+    }
+  }
 }

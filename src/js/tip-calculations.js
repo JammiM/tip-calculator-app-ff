@@ -141,7 +141,13 @@ export function generateForm() {
     
     <form action="" class="split-form" id="splitForm">
         <div class="user-inputs split-form__subgrid-item">
-          <label for="tip-price">Bill:
+          <label for="tip-price">Bill:</label>
+          <div class="split-form__prefixed-input-field">
+            <span class="prefix">
+              <img src=${
+                new URL("../assets/icon-dollar.svg", import.meta.url).href
+              } alt="Dollar icon" />
+            </span>
           <input
             type="number"
             id="tip-price"
@@ -151,9 +157,8 @@ export function generateForm() {
             value="0"
             min="0"
             max="9999999"
-            class="split-form__number-input-field"
           />
-          </label>
+        </div>
           <p>Select Tip %</p>
           <div class="split-form__single-tip-amount">
             <button
@@ -210,20 +215,26 @@ export function generateForm() {
         />
        </div>
           </div>
-          <label for="number-of-people">Number of people:
+
+
+          <label for="number-of-people">Number of people:</label>
+          <div class="split-form__prefixed-input-field">
+            <span class="prefix">
+              <img src=${
+                new URL("../assets/icon-person.svg", import.meta.url).href
+              } alt="Person icon" />
+            </span>
           <input
             type="number"
             id="number-of-people"
             name="number-of-people"
-            placeholder="price"
             step="1"
             value="1"
             min="1"
             max="9999999"
             required
-            class="split-form__number-input-field"
-          />
-          </label>
+         />
+        </div>
         </div>
         <div class="calulated-totals split-form__subgrid-item">
           <div>
