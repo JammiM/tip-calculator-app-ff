@@ -234,8 +234,8 @@ export function generateForm() {
                 </p>
                 <p class="split-form__total-text--muted">/ person</p>
               </div>
-              <p id="tip-per-person" class="split-form__final-cost">$0.00</p>
-            </div>
+                <h2 id="tip-per-person" class="split-form__final-cost">$0.00</h2>
+              </div>
             <div class="split-form__calulated-totals">            
               <div class="split-form__calulated-text">
                 <p class="split-form__total-text">
@@ -243,7 +243,7 @@ export function generateForm() {
                 </p>
                 <p class="split-form__total-text--muted">/ person</p>
               </div>
-              <p id="total--bill-per-person" class="split-form__final-cost">$0.00</p>
+              <h2 id="total--bill-per-person" class="split-form__final-cost">$0.00</h2>
             </div>
           </div>
           <input type="submit" value="RESET" id="reset-button" class="split-form__reset-button" />
