@@ -141,7 +141,7 @@ export function generateForm() {
     
     <form action="" class="split-form" id="splitForm">
         <div class="user-inputs split-form__subgrid-item">
-          <label for="tip-price">Bill:</label>
+          <label for="tip-price">Bill:
           <input
             type="number"
             id="tip-price"
@@ -153,6 +153,7 @@ export function generateForm() {
             max="9999999"
             class="split-form__number-input-field"
           />
+          </label>
           <p>Select Tip %</p>
           <div id="single-tip-amount">
             <button
@@ -208,7 +209,7 @@ export function generateForm() {
               value="0"
             />
           </div>
-          <label for="number-of-people">Number of people:</label>
+          <label for="number-of-people">Number of people:
           <input
             type="number"
             id="number-of-people"
@@ -221,6 +222,7 @@ export function generateForm() {
             required
             class="split-form__number-input-field"
           />
+          </label>
         </div>
         <div class="calulated-totals split-form__subgrid-item">
           <div class="split-form__calulated-totals">
