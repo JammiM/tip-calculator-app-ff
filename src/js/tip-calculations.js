@@ -131,15 +131,14 @@ export function generateForm() {
   const container = document.body;
   container.innerHTML = `
   <main>
-    <h1 class="sr-only">Splitter</h1>
+      <h1 class="sr-only">Splitter</h1>
 
-    <picture>
-      <img src=${
-        new URL("/logo.svg", import.meta.url).href
-      } alt="Splitter Logo" />
-    </picture>
-    
-    <form action="" class="split-form" id="splitForm">
+      <picture>
+        <img src=${new URL("/logo.svg", import.meta.url).href} alt="Splitter
+        Logo" />
+      </picture>
+
+      <form action="" class="split-form" id="splitForm">
         <div class="user-inputs split-form__subgrid-item">
           <label for="tip-price">Bill:</label>
           <div class="split-form__prefixed-input-field">
@@ -148,17 +147,17 @@ export function generateForm() {
                 new URL("../assets/icon-dollar.svg", import.meta.url).href
               } alt="Dollar icon" />
             </span>
-          <input
-            type="number"
-            id="tip-price"
-            name="bill"
-            placeholder="price"
-            step=".01"
-            value="0"
-            min="0"
-            max="9999999"
-          />
-        </div>
+            <input
+              type="number"
+              id="tip-price"
+              name="bill"
+              placeholder="price"
+              step=".01"
+              value="0"
+              min="0"
+              max="9999999"
+            />
+          </div>
           <p>Select Tip %</p>
           <div class="split-form__single-tip-amount">
             <button
@@ -201,21 +200,20 @@ export function generateForm() {
             >
               50%
             </button>
-       <div>       
-        <label for="custom-tip-price" class="sr-only">Custom Tip:</label>
-        <input
-          type="number"
-          aria-label="Custom tip amount"
-          name="custom-tip-price"
-          id="custom-tip-price"
-          min="0"
-          class="tip-option split-form__number-input-field"
-          max="100"
-          placeholder="Custom"
-        />
-       </div>
+            <div>
+              <label for="custom-tip-price" class="sr-only">Custom Tip:</label>
+              <input
+                type="number"
+                aria-label="Custom tip amount"
+                name="custom-tip-price"
+                id="custom-tip-price"
+                min="0"
+                class="tip-option split-form__number-input-field"
+                max="100"
+                placeholder="Custom"
+              />
+            </div>
           </div>
-
 
           <label for="number-of-people">Number of people:</label>
           <div class="split-form__prefixed-input-field">
@@ -224,43 +222,46 @@ export function generateForm() {
                 new URL("../assets/icon-person.svg", import.meta.url).href
               } alt="Person icon" />
             </span>
-          <input
-            type="number"
-            id="number-of-people"
-            name="number-of-people"
-            step="1"
-            value="1"
-            min="1"
-            max="9999999"
-            required
-         />
-        </div>
+            <input
+              type="number"
+              id="number-of-people"
+              name="number-of-people"
+              step="1"
+              value="1"
+              min="1"
+              max="9999999"
+              required
+            />
+          </div>
         </div>
         <div class="calulated-totals split-form__subgrid-item">
           <div>
             <div class="split-form__calulated-totals">
               <div class="split-form__calulated-text">
-                <p class="split-form__total-text">
-                  Tip Amount
-                </p>
+                <p class="split-form__total-text">Tip Amount</p>
                 <p class="split-form__total-text--muted">/ person</p>
               </div>
-                <h2 id="tip-per-person" class="split-form__final-cost">$0.00</h2>
-              </div>
-            <div class="split-form__calulated-totals">            
+              <h2 id="tip-per-person" class="split-form__final-cost">$0.00</h2>
+            </div>
+            <div class="split-form__calulated-totals">
               <div class="split-form__calulated-text">
-                <p class="split-form__total-text">
-                  Total
-                </p>
+                <p class="split-form__total-text">Total</p>
                 <p class="split-form__total-text--muted">/ person</p>
               </div>
-              <h2 id="total--bill-per-person" class="split-form__final-cost">$0.00</h2>
+              <h2 id="total--bill-per-person" class="split-form__final-cost">
+                $0.00
+              </h2>
             </div>
           </div>
-          <input type="submit" value="RESET" id="reset-button" class="split-form__reset-button" />
+          <input
+            type="submit"
+            value="RESET"
+            id="reset-button"
+            class="split-form__reset-button"
+          />
         </div>
       </form>
-</main>`;
+    </main>`;
 }
 
 export function destroyForm() {
