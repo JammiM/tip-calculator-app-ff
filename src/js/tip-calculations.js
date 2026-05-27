@@ -155,7 +155,7 @@ export function generateForm() {
           />
           </label>
           <p>Select Tip %</p>
-          <div id="single-tip-amount">
+          <div class="split-form__single-tip-amount">
             <button
               type="button"
               data-tip="5"
@@ -196,18 +196,19 @@ export function generateForm() {
             >
               50%
             </button>
-            <label for="custom-tip-price" class="sr-only">Custom Tip:</label>
-            <input
-              type="number"
-              aria-label="Custom tip amount"
-              name="custom-tip-price"
-              id="custom-tip-price"
-              min="0"
-              class="tip-option split-form__number-input-field"
-              max="100"
-              placeholder="Custom"
-              value="0"
-            />
+       <div>       
+        <label for="custom-tip-price" class="sr-only">Custom Tip:</label>
+        <input
+          type="number"
+          aria-label="Custom tip amount"
+          name="custom-tip-price"
+          id="custom-tip-price"
+          min="0"
+          class="tip-option split-form__number-input-field"
+          max="100"
+          placeholder="Custom"
+        />
+       </div>
           </div>
           <label for="number-of-people">Number of people:
           <input
@@ -216,8 +217,8 @@ export function generateForm() {
             name="number-of-people"
             placeholder="price"
             step="1"
-            value="0"
-            min="0"
+            value="1"
+            min="1"
             max="9999999"
             required
             class="split-form__number-input-field"

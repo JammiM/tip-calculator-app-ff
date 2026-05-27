@@ -2,7 +2,7 @@
   $b: #{&};
   padding: var(--default-padding);
   background-color: var(--white);
-  width: 500px;
+  width: 800px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 2em;
@@ -21,12 +21,19 @@
     background-color: var(--green-900);
   }
 
+  &__single-tip-amount {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
   &__tip-button {
     cursor: pointer;
     background-color: var(--green-900);
     color: var(--white);
     border: none;
-    border-radius: 20px;
+    border-radius: 0.25rem;
     font-size: calc(var(--fs-regular) + 0.25rem);
 
     &:hover,
@@ -39,22 +46,20 @@
 
   &__number-input-field {
     cursor: pointer;
-    border: 2px solid transparent;
+    width: 100%;
+    border: 0.125rem solid transparent;
     background-color: var(--grey-50);
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    text-align: end;
 
     &:focus,
     &:active {
       outline: none;
-      border: 2px solid var(--green-900);
+      border: 0.125rem solid var(--green-900);
     }
 
     &:user-invalid {
-      border: 2px solid orange;
-    }
-
-    &:user-valid {
-      border: 2px solid yellow;
+      border: 0.125rem solid red;
     }
   }
 
