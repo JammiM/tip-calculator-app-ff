@@ -5,9 +5,19 @@
   --grey-400: hsl(184deg 14% 56%);
   --grey-200: hsl(185deg 41% 84%);
   --grey-50: hsl(189deg 47% 97%);
-  --white: hsl(0deg 100% 100%);
+  --white: hsl(0, 0%, 100%);
+  --fc-muted-white: color-mix(in hsl, var(--white), #000 30%);
+
   --light-lime: hsl(172, 67%, 46%);
   --default-padding: 1.25em;
+
+  --fw-light: 500;
+  --fw-regular: 700;
+  --fw-large: 900;
+
+  --fs-small: 0.5rem;
+  --fs-regular: 1rem;
+  --fs-large: 2rem;
 }
 
 body {

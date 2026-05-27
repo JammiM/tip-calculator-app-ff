@@ -27,6 +27,7 @@
     color: var(--white);
     border: none;
     border-radius: 20px;
+    font-size: calc(var(--fs-regular) + 0.25rem);
 
     &:hover,
     &:focus,
@@ -86,10 +87,11 @@
   }
 
   &__total-text {
+    font-size: var(--fs-regular);
     color: var(--white);
   }
   &__total-text--muted {
-    color: var(--grey-400);
+    color: var(--fc-muted-white);
   }
 
   &__final-cost {
@@ -97,6 +99,6 @@
     align-content: center;
 
     color: var(--light-lime);
-    font-size: 1.75rem;
+    font-size: var(--fs-large);
   }
 }
