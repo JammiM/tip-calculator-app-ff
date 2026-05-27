@@ -19,6 +19,10 @@
   &__subgrid-item:nth-of-type(2) {
     color: var(--white);
     background-color: var(--green-900);
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1.5fr 0.25fr;
   }
 
   &__single-tip-amount {

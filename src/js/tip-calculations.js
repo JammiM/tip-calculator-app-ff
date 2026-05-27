@@ -226,23 +226,25 @@ export function generateForm() {
           </label>
         </div>
         <div class="calulated-totals split-form__subgrid-item">
-          <div class="split-form__calulated-totals">
-            <div class="split-form__calulated-text">
-              <p class="split-form__total-text">
-                Tip Amount
-              </p>
-              <p class="split-form__total-text--muted">/ person</p>
+          <div>
+            <div class="split-form__calulated-totals">
+              <div class="split-form__calulated-text">
+                <p class="split-form__total-text">
+                  Tip Amount
+                </p>
+                <p class="split-form__total-text--muted">/ person</p>
+              </div>
+              <p id="tip-per-person" class="split-form__final-cost">$0.00</p>
             </div>
-            <p id="tip-per-person" class="split-form__final-cost">$0.00</p>
-          </div>
-          <div class="split-form__calulated-totals">            
-            <div class="split-form__calulated-text">
-              <p class="split-form__total-text">
-                Total
-              </p>
-              <p class="split-form__total-text--muted">/ person</p>
+            <div class="split-form__calulated-totals">            
+              <div class="split-form__calulated-text">
+                <p class="split-form__total-text">
+                  Total
+                </p>
+                <p class="split-form__total-text--muted">/ person</p>
+              </div>
+              <p id="total--bill-per-person" class="split-form__final-cost">$0.00</p>
             </div>
-            <p id="total--bill-per-person" class="split-form__final-cost">$0.00</p>
           </div>
           <input type="submit" value="RESET" id="reset-button" class="split-form__reset-button" />
         </div>
