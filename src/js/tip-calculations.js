@@ -284,6 +284,9 @@ resetButton.addEventListener("click", (ev) => {
     item.classList.remove("selected-tip");
   });
 
+  tipPerPerson.innerHTML = "$0.00";
+  totalBillPerPersonElem.innerHTML = "$0.00";
+
   splitForm.reset();
 });
 
