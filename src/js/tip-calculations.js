@@ -80,7 +80,7 @@ function selectTipOption(inputElement) {
 
 function handleTipStyling(_tipOptions, _targetElement) {
   _tipOptions.forEach((currentElement) => {
-    if (_targetElement == currentElement) {
+    if (_targetElement === currentElement) {
       selectTipOption(_targetElement);
     } else {
       deselectTipOption(currentElement);
@@ -275,7 +275,7 @@ resetButton.addEventListener("click", (ev) => {
   // numberOfPeople.reportValidity();
 
   Array.from(splitForm.elements).map((item) => {
-    if (item.type == "number") {
+    if (item.type === "number") {
       item.value = 0;
     }
 
@@ -290,7 +290,7 @@ resetButton.addEventListener("click", (ev) => {
 
 tipOptions.forEach((inputItem) => {
   inputItem.addEventListener("click", (ev) => {
-    if (ev.target.tagName == "BUTTON") {
+    if (ev.target.tagName === "BUTTON") {
       splitForm.elements.namedItem("custom-tip-price").value = 0;
 
       tipAmount = Number(ev.target.getAttribute("data-tip"));
