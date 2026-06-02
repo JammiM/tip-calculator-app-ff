@@ -6,7 +6,7 @@
   display: grid;
   border-radius: 2em;
   margin-block-start: 2.5em;
-  gap: 20px;
+  gap: 1.25em;
 
   grid-template-areas:
     "inputs"
@@ -94,7 +94,7 @@
     background-color: var(--light-lime);
     color: var(--green-900);
     border: none;
-    border-radius: 6px;
+    border-radius: 0.375em;
     font-weight: bold;
     width: 100%;
 
@@ -139,7 +139,7 @@
     border: 0.125rem solid transparent;
     background-color: var(--grey-50);
     border-radius: 0.5rem;
-    padding: 5px;
+    padding: 0.313em;
 
     input {
       border: none;
