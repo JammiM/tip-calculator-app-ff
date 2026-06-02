@@ -254,12 +254,9 @@ export function generateForm() {
               </h2>
             </div>
           </div>
-          <input
-            type="submit"
-            value="RESET"
-            id="reset-button"
-            class="split-form__reset-button"
-          />
+          <button type="button" id="reset-button" class="split-form__reset-button">
+            RESET
+          </button>
         </div>
       </form>
     </main>`;
