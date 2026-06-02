@@ -42,9 +42,9 @@ export function tipAmountPerPerson(grandTotal, numberOfPeople) {
   return Number((grandTotal / numberOfPeople).toFixed(2));
 }
 
-export function totalBillPerPerson(billAmount, totalTip, numberOfPeople) {
-  const totalBill = Number(billAmount) + Number(totalTip);
-  const splitTotalPerson = totalBill / numberOfPeople;
+export function totalBillPerPerson(billAmount, calculatedTip, numberOfPeople) {
+  const calculatedBill = Number(billAmount) + Number(calculatedTip);
+  const splitTotalPerson = calculatedBill / numberOfPeople;
 
   return Number(splitTotalPerson).toFixed(2);
 }
