@@ -134,8 +134,9 @@ export function generateForm() {
       <h1 class="sr-only">Splitter</h1>
 
       <picture>
-        <img src=${new URL("/logo.svg", import.meta.url).href} alt="Splitter
-        Logo" />
+        <img src=${
+          new URL("/logo.svg", import.meta.url).href
+        } alt="Splitter Logo"/>
       </picture>
 
       <form action="" class="split-form" id="splitForm">
