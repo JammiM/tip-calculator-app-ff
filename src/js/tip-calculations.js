@@ -254,7 +254,7 @@ export function generateForm() {
               </h2>
             </div>
           </div>
-          <button type="button" id="reset-button" class="split-form__reset-button">
+          <button type="button" for="splitForm" id="reset-button" class="split-form__reset-button">
             RESET
           </button>
         </div>
