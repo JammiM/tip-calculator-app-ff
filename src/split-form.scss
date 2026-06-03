@@ -13,17 +13,17 @@
     "totals";
 
   @media only screen and (min-width: 600px) {
-    width: 0.8em;
+    width: 80%;
     gap: 0.313em;
     grid-template-areas: "inputs totals";
   }
 
   @media only screen and (min-width: 768px) {
-    width: 0.7em;
+    width: 70%;
   }
 
   @media only screen and (min-width: 992px) {
-    width: 0.6em;
+    width: 60%;
   }
 
   &__subgrid-item {
